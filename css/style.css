@@ -5,21 +5,44 @@
 }
 
 /*Common*/
-body{
+body {
     background-color: black;
 }
+main {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+}
 
+.green {
+    color: green;
+}
+
+i.fas {
+    font-size: 25px;
+}
+
+i.far {
+    font-size: 25px;
+}
+
+#font-size10 {
+    font-size: 10px;
+}
+#mr0 {
+    margin-right: 0;
+}
 /*Fine common*/
 
 /*Main: Quattro sezioni*/
 
 /*Section function*/
-.function{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 5vh;
-    padding-right: 15px;
+
+
+main > .function {
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 .function button{
     background-color: rgba(255, 255, 255, 0.2);
@@ -28,6 +51,7 @@ body{
     border: none;
     padding: 5px;
 }
+
 
 /*End function*/
 
@@ -38,41 +62,118 @@ main > .section{
 
 .section-main-left,
 .section-main-right {
-    flex-grow: 1;
-    height: 85vh;
-    background-color: green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    height: calc(90vh - 100px);
+    font-size: 80px;
 }
 
-/*Fine section main-left e main-right*/
+.section-main-left > span,.section-main-right > span{
+    font-size: 30px;
+    color: white;
+}
+
+.section-main-left > i,.section-main-right > i{
+    color: gray;
+}
+
+.section-main-right > i:active{
+    color: blue;
+}
+
+
+/*End section main-left e main-right*/
 
 /*Section main-center*/
 .section-main-center{
-    flex-grow: 10;
-    height: 85vh;
-    background-color: hotpink;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 80%;
+    height: calc(90vh - 100px);
+    overflow-x: hidden;    
 }
-/*Fine section main-center*/
 
-/*Fine main*/
+.row{
+    display: flex;
+    justify-content: space-evenly;
+    height: calc(90vh / 5);
+}
+.row > div{
+    margin-bottom: 10px;
+    width: 150px;
+}
+.row > div > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section-main-center > .row > div{
+    position: relative;
+}
+
+img + div{
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+}
+
+/*End section main-center*/
+
+/*End main*/
 
 /*Footer: navigatore*/
 
 footer{
     display: flex;
     justify-content: space-between;
-}
-.footer_items-left,
-.footer_items-right {
-    flex-grow: 2;
-    width: 100px;
-    height: 10vh;
-    background-color: blue;
+    background-color: rgb(33, 35, 36);
 }
 
-.footer_items-center{
-    height: 10;
-    flex-grow: 6;
-    background-color: red;
+/*Footer left - right*/
+.footer_items-left,
+.footer_items-right {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-grow: 1;
+    height: 10vh;
+    
 }
-/*Fine footer: navigatore*/
+.footer_items-left > div, .footer_items-center > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.footer_items-center > div{
+    margin-right: 40px;
+}
+
+.footer_items-right {
+    background-color: rgb(75, 76, 79);
+    color: red;
+}
+
+/*Fine footer left e right*/
+
+.footer_items-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 10vh;
+    flex-grow: 6;
+}
+
+
+/*End footer: navigatore*/
 
